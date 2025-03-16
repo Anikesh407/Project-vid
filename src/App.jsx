@@ -11,7 +11,7 @@ import { useState } from "react";
 function App() {
   const [isloggedIn, setIsLogIn] = useState(true);
   return (
-    <div className="w-screen h-screen bg-richblack-900 flex flex-col">
+    <div className=" bg-[#0c0e18] w-screen  flex flex-col items-center">
       <Navbar isloggedIn={isloggedIn} setIsLogIn={setIsLogIn} />
       <Routes>
         <Route path="/about" element={<About />} />

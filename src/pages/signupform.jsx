@@ -12,6 +12,7 @@ function SignupForm({ setIsLogIn }) {
     confirmPass: "",
   });
   const [showpassword, setshowpass] = useState(false);
+  const [showConfpassword, setshowConfpass] = useState(false);
 
   const navigate = useNavigate();
 
@@ -35,8 +36,10 @@ function SignupForm({ setIsLogIn }) {
   }
   return (
     <div>
-      <div>
-        <button>Students</button>
+      <div className="flex justify-between items-center w-[200px] h-[50px] bg-gray-700  rounded-[20px] p-[5px]">
+        <button className="text-center bg-gray-500 w-[90px] rounded-[20px] h-full ">
+          Students
+        </button>
         <button>Instructor</button>
       </div>
       <form action="" onSubmit={submitHandler}>
@@ -104,14 +107,14 @@ function SignupForm({ setIsLogIn }) {
             </p>
             <input
               required
-              type={showpassword ? "text" : "password"}
+              type={showConfpassword ? "text" : "password"}
               name="confirmPass"
               onChange={changeHandler}
               placeholder="Enter Password"
               value={formData.confirmPass}
             />
-            <span onClick={() => setshowpass((prev) => !prev)}>
-              {showpassword ? <IoEye /> : <IoEyeOff />}
+            <span onClick={() => setshowConfpass((prev) => !prev)}>
+              {showConfpassword ? <IoEye /> : <IoEyeOff />}
             </span>
           </label>
         </div>

@@ -6,8 +6,8 @@ function Navbar(props) {
   let isloggedIn = props.isloggedIn;
   let setIsLogIn = props.setIsLogIn;
   return (
-    <nav className="  flex items-center justify-around  max-w-[100vw]  h-1/12  font-bold text-3l ">
-      <div className="nvbg">
+    <nav className="  flex items-center justify-between    h-[60px]  max-w-[1160px] w-11/12  font-bold text-3l ">
+      <div className="nvbg ml-5  h-[100%] flex items-center justify-center">
         <img
           className="nvbg"
           src={logo}
@@ -17,7 +17,7 @@ function Navbar(props) {
           loading="lazy"
         />
       </div>
-      <div className=" nvbg text-white flex w-[320px] h-[100%] justify-between items-center ">
+      <div className=" nvbg text-white flex w-[280px] h-[100%] justify-between items-center ">
         <NavLink className="nvbg h-[100%] " to="/">
           Home
         </NavLink>

@@ -1,7 +1,4 @@
-*{
-  outline: none;
-  background-color: #0c0e18;
-}
+
 
 .active{
   background-color:transparent;
@@ -9,11 +6,6 @@
 
 }
 
-
-nav{
-  background-color: rgb(19, 19, 32);
-
-}
 .nvbg{
   background-color: transparent;
   display: flex;
@@ -26,8 +18,8 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px;
-  padding: 8px;
+  width: fit-content;
+  padding: 10px;
   border-radius: 8px;
   text-align: center;
 
