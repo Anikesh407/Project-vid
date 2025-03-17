@@ -27,11 +27,7 @@ function LoginForm({ setIsLogIn }) {
     }));
   }
   return (
-    <form
-      
-      onSubmit={submithandler}
-      className="flex flex-col gap-y-4  mt-2 "
-    >
+    <form onSubmit={submithandler} className="flex flex-col gap-y-4  mt-2 ">
       <label htmlFor="email">
         <p className="text-[0.875em] text-gray-200 mb-1 leading[1.375rem]">
           Email Adress
@@ -75,7 +71,7 @@ function LoginForm({ setIsLogIn }) {
             <IoEyeOff fontSize={24} fill="#AFB2BF" />
           )}
         </span>
-        <Link to="#" className="absolute right-1 top-[75px]">
+        <Link to="#" className="absolute right-1 top-[65px]">
           <p className="font-light text-l text-gray-600">Forget Password</p>
         </Link>
       </label>
