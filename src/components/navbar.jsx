@@ -18,30 +18,36 @@ function Navbar(props) {
         />
       </div>
       <div className=" nvbg text-white flex w-[280px] h-[100%] justify-between items-center ">
-        <NavLink className="nvbg h-[100%] " to="/">
+        <NavLink className="nvbg h-[100%]  " to="/">
           Home
         </NavLink>
-        <NavLink className="nvbg h-[100%] " to="/about">
+        <NavLink className="nvbg h-[100%]  " to="/about">
           About
         </NavLink>
-        <NavLink className="nvbg h-[100%] " to="/contact">
+        <NavLink className="nvbg h-[100%]  " to="/contact">
           Contact
         </NavLink>
       </div>
       <div className="nvbg flex justify-between items-center w-[220px] h-[100%] text-white ">
         {!isloggedIn && (
-          <NavLink className="nvbg nav-right-btn h h-[100%] " to="/login">
+          <NavLink
+            className="nvbg nav-right-btn h h-[100%] whitespace-nowrap "
+            to="/login"
+          >
             Log In
           </NavLink>
         )}
         {!isloggedIn && (
-          <NavLink className="nvbg nav-right-btn h h-[100%] " to="/signup">
+          <NavLink
+            className="nvbg nav-right-btn h h-[100%] whitespace-nowrap "
+            to="/signup"
+          >
             Sign Up
           </NavLink>
         )}
         {isloggedIn && (
           <Link
-            className="nvbg nav-right-btn h"
+            className="nvbg nav-right-btn h whitespace-nowrap"
             to="/"
             onClick={() => {
               setIsLogIn(false);
