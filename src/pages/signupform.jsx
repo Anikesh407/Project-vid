@@ -10,6 +10,7 @@ function SignupForm({ setIsLogIn }) {
     email: "",
     password: "",
     confirmPass: "",
+    role: "students",
   });
   const [showpassword, setshowpass] = useState(false);
   const [showConfpassword, setshowConfpass] = useState(false);
@@ -36,19 +37,46 @@ function SignupForm({ setIsLogIn }) {
   }
   return (
     <div>
-      <div className="flex justify-between items-center w-[200px] h-[50px] bg-gray-700  rounded-[20px] p-[5px]">
-        <button className="text-center bg-gray-500 w-[90px] rounded-[20px] h-full ">
+      <div className="flex gap-x-4 w-[200px] px-[8px] py-[5px] rounded-[25px] h-[50px] bg-gray-800">
+        <button
+          type="radio"
+          name="role"
+          value="students"
+          className={
+            formData.role == "students"
+              ? "bg-[#0c0e18] rounded-[25px] w-[130px] h-[40px] text-white"
+              : "cursor-pointer text-gray-500 w-[130px]"
+          }
+          onClick={changeHandler}
+        >
           Students
         </button>
-        <button>Instructor</button>
+        <button
+          type="radio"
+          name="role"
+          value="instructor"
+          className={
+            formData.role == "instructor"
+              ? "bg-[#0c0e18] rounded-[25px] w-[130px] h-[40px] text-white"
+              : "cursor-pointer text-gray-500 w-[130px] "
+          }
+          onClick={changeHandler}
+        >
+          Instructor
+        </button>
       </div>
-      <form action="" onSubmit={submitHandler}>
-        <div>
+      <form
+        action=""
+        onSubmit={submitHandler}
+        className="flex flex-col gap-y-4  mt-2"
+      >
+        <div className="flex justify-between">
           <label>
-            <p>
-              First Name <sup>*</sup>
+            <p className="text-[0.875em] text-gray-200 mb-1 leading[1.375rem]">
+              First Name <sup className="text-pink-700">*</sup>
             </p>
             <input
+              className="w-full bg-gray-800 rounded-[0.5rem]  text-gray-200 p-[12px] border-b-[0.5px] "
               required
               type="text"
               name="firstname"
@@ -58,10 +86,11 @@ function SignupForm({ setIsLogIn }) {
             />
           </label>
           <label>
-            <p>
-              Last Name <sup>*</sup>
+            <p className="text-[0.875em] text-gray-200 mb-1 leading[1.375rem]">
+              Last Name <sup className="text-pink-700">*</sup>
             </p>
             <input
+              className="w-full bg-gray-800 rounded-[0.5rem]  text-gray-200 p-[12px] border-b-[0.5px] "
               required
               type="text"
               name="lastname"
@@ -72,10 +101,11 @@ function SignupForm({ setIsLogIn }) {
           </label>
         </div>
         <label>
-          <p>
-            Email Adress <sup>*</sup>
+          <p className="text-[0.875em] text-gray-200 mb-1 leading[1.375rem]">
+            Email Adress <sup className="text-pink-700">*</sup>
           </p>
           <input
+            className="w-full bg-gray-800 rounded-[0.5rem]  text-gray-200 p-[12px] border-b-[0.5px] "
             required
             type="email"
             name="email"
@@ -84,12 +114,13 @@ function SignupForm({ setIsLogIn }) {
             value={formData.email}
           />
         </label>
-        <div>
-          <label>
-            <p>
-              Create Password <sup>*</sup>
+        <div className="flex justify-between ">
+          <label className="relative">
+            <p className="text-[0.875em] text-gray-200 mb-1 leading[1.375rem]">
+              Create Password <sup className="text-pink-700">*</sup>
             </p>
             <input
+              className="w-full bg-gray-800 rounded-[0.5rem]  text-gray-200 p-[12px] border-b-[0.5px] "
               required
               type={showpassword ? "text" : "password"}
               name="password"
@@ -97,15 +128,23 @@ function SignupForm({ setIsLogIn }) {
               placeholder="Enter Password"
               value={formData.password}
             />
-            <span onClick={() => setshowpass((prev) => !prev)}>
-              {showpassword ? <IoEye /> : <IoEyeOff />}
+            <span
+              className="absolute right-3 top-[38px] cursor-pointer"
+              onClick={() => setshowpass((prev) => !prev)}
+            >
+              {showpassword ? (
+                <IoEye fontSize={24} fill="#AFB2BF" />
+              ) : (
+                <IoEyeOff fontSize={24} fill="#AFB2BF" />
+              )}
             </span>
           </label>
-          <label>
-            <p>
-              Conform Password <sup>*</sup>
+          <label className="relative">
+            <p className="text-[0.875em] text-gray-200 mb-1 leading[1.375rem]">
+              Conform Password <sup className="text-pink-700">*</sup>
             </p>
             <input
+              className="w-full bg-gray-800 rounded-[0.5rem]  text-gray-200 p-[12px] border-b-[0.5px] "
               required
               type={showConfpassword ? "text" : "password"}
               name="confirmPass"
@@ -113,12 +152,21 @@ function SignupForm({ setIsLogIn }) {
               placeholder="Enter Password"
               value={formData.confirmPass}
             />
-            <span onClick={() => setshowConfpass((prev) => !prev)}>
-              {showConfpassword ? <IoEye /> : <IoEyeOff />}
+            <span
+              className="absolute right-3 top-[38px] cursor-pointer"
+              onClick={() => setshowConfpass((prev) => !prev)}
+            >
+              {showConfpassword ? (
+                <IoEye fontSize={24} fill="#AFB2BF" />
+              ) : (
+                <IoEyeOff fontSize={24} fill="#AFB2BF" />
+              )}
             </span>
           </label>
         </div>
-        <button>Create Account</button>
+        <button className="w-full bg-yellow-500 text-black rounded-[8px] font-medium px-[12px] py-[8px] mt-[25px] text-center ">
+          Create Account
+        </button>
       </form>
     </div>
   );

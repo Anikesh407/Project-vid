@@ -28,7 +28,7 @@ function LoginForm({ setIsLogIn }) {
   }
   return (
     <form
-      action=""
+      
       onSubmit={submithandler}
       className="flex flex-col gap-y-4  mt-2 "
     >

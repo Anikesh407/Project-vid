@@ -20,12 +20,12 @@ function Template({ title, desc1, desc2, image, formtype, setIsLogIn }) {
         ) : (
           <LoginForm setIsLogIn={setIsLogIn} />
         )}
-        <div className="flex w-full items-center my-2 gap-x-2  ">
+        <div className="flex w-full items-center my-1 gap-x-2  ">
           <div className="h-[1px] w-full bg-gray-900 "></div>
           <p className="text-gray-800 font-medium leading[1.375rem] ">Or</p>
           <div className="h-[1px] w-full bg-gray-900 "></div>
         </div>
-        <button className="flex justify-center gap-x-[3px] items-center w-full rounded-[8px] font-medium text-gray-600  border  border-gray-600  py-[8px] mt-2 ">
+        <button className="flex justify-center gap-x-[3px] items-center w-full rounded-[8px] font-medium text-gray-600  border  border-gray-600  py-[8px] mt-1 ">
           <FcGoogle />
           <p>Sign up with Google</p>
         </button>
