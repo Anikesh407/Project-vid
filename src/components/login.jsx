@@ -1,5 +1,5 @@
 import Template from "../pages/template";
-import loginimg from "../assets/login.png";
+import loginimg from "../assets/student2.jpg";
 
 const Login = ({ setisloggedin }) => {
   return (

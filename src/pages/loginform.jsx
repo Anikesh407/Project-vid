@@ -60,7 +60,7 @@ function LoginForm({ setIsLogIn }) {
           name="passw"
         />
         <span
-          className="absolute right-3 top-[38px] cursor-pointer"
+          className="absolute right-3 top-[34px] cursor-pointer"
           role="button"
           aria-label={showPassword ? "Hide password" : "Show password"}
           onClick={() => setshowpass((prev) => !prev)}

@@ -4,7 +4,7 @@ function Image({ image }) {
     <div className=" relative">
       <img src={frame} width={350} height={350} loading="lazy" />
       <img
-        className="  absolute top-[-10px] left-[-10px] "
+        className="  absolute top-[-10px] left-[-10px] h-full "
         src={image}
         width={350}
         height={350}

@@ -129,7 +129,7 @@ function SignupForm({ setIsLogIn }) {
               value={formData.password}
             />
             <span
-              className="absolute right-3 top-[38px] cursor-pointer"
+              className="absolute right-3 top-[34px] cursor-pointer"
               onClick={() => setshowpass((prev) => !prev)}
             >
               {showpassword ? (
@@ -153,7 +153,7 @@ function SignupForm({ setIsLogIn }) {
               value={formData.confirmPass}
             />
             <span
-              className="absolute right-3 top-[38px] cursor-pointer"
+              className="absolute right-3 top-[34px] cursor-pointer"
               onClick={() => setshowConfpass((prev) => !prev)}
             >
               {showConfpassword ? (
