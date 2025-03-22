@@ -28,3 +28,6 @@
 input{
   height: 38px;
 }
+/* .invert-1 {
+  filter: invert(1) brightness(2);
+} */

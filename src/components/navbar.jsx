@@ -9,13 +9,13 @@ function Navbar(props) {
     <nav className="  flex items-center justify-between    h-[60px]  max-w-[1160px] w-11/12  font-bold text-3l ">
       <div className="nvbg ml-5  h-[100%] flex items-center justify-center">
         <img
-          className="nvbg  invert-1"
+          className="nvbg "
           src={logo}
           alt="image"
           width={160}
           height={38}
           loading="lazy"
-                 />
+        />
       </div>
       <div className=" nvbg text-white flex w-[280px] h-[100%] justify-between items-center ">
         <NavLink className="nvbg h-[100%]  " to="/">
@@ -45,7 +45,7 @@ function Navbar(props) {
             Sign Up
           </NavLink>
         )}
-         {isloggedIn && (
+        {isloggedIn && (
           <NavLink className="nvbg nav-right-btn h-[100%]" to="/dashboard">
             Dashboard
           </NavLink>
@@ -62,7 +62,6 @@ function Navbar(props) {
             Log Out
           </Link>
         )}
-       
       </div>
     </nav>
   );
